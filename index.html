@@ -489,6 +489,53 @@
             <use href="./images/icons.svg#close"></use>
           </svg>
         </button>
+        <form class="form">
+          <h2 class="form-title">Оставьте свои данные, мы вам перезвоним</h2>
+          <label class="label-field">
+            <input type="text" class="label-form-input" name="name" />
+            <span class="form-label">Имя</span>
+            <svg class="form-icon" width="18" height="18">
+              <use href="./images/icons.svg#person"></use>
+            </svg>
+          </label>
+          <label class="label-field">
+            <input type="tel" class="label-form-input" name="tel" />
+            <span class="form-label">Телефон</span>
+            <svg class="form-icon" width="18" height="18">
+              <use href="./images/icons.svg#phone"></use>
+            </svg>
+          </label>
+          <label class="label-field">
+            <input type="email" class="label-form-input" name="mail" />
+            <span class="form-label">Почта</span>
+            <svg class="form-icon" width="18" height="18">
+              <use href="./images/icons.svg#email"></use>
+            </svg>
+          </label>
+          <label class="text-label">
+            <span class="comment-label">Комментарий</span>
+            <textarea
+              name="text"
+              class="text-input"
+              id="text"
+              rows="10"
+              placeholder="Введите текст"
+            ></textarea>
+          </label>
+          <div class="form-field">
+            <label class="field">
+              <input class="checkbox" type="checkbox" name="policy" />
+              <span class="icon"></span>
+              <span class="label"
+                >Соглашаюсь с рассылкой и принимаю
+                <a class="form-link" href="">Условия договора</a></span
+              >
+            </label>
+          </div>
+          <div class="btn-wrap">
+            <button type="submit" class="btn form-btn">Отправить</button>
+          </div>
+        </form>
       </div>
     </div>
 
