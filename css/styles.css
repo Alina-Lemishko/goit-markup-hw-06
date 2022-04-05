@@ -1062,12 +1062,13 @@ button {
 .checkbox:checked + .checkbox-icon {
   border-color: transparent;
   background-color: var(--accent-color);
-  background-size: contain;
-  background-origin: border-box;
-  background-image: url(../images/check.svg);
+  /* background-size: contain;
+  background-origin: border-box; */
+  /* background-image: url(../images/check.svg); */
 }
 
 .checkbox-icon {
+  position: relative;
   display: block;
   width: 16px;
   height: 15px;
@@ -1075,6 +1076,13 @@ button {
 
   border: 2px solid var(--primary-text-color);
   border-radius: 2px;
+}
+
+.icon-check {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .label {
