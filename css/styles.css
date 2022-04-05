@@ -262,12 +262,13 @@ button {
   align-items: center;
 }
 
-.btn-primary {
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.btn {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.btn-primary:hover,
-.btn-primary:focus {
+.btn:hover,
+.btn:focus {
   color: var(--accent-color);
   background-color: var(--primary-white-color);
 }
@@ -662,15 +663,19 @@ button {
   line-height: 1.88;
 
   letter-spacing: 0.06em;
+  fill: currentColor;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.subscribe-btn::after {
-  content: '';
-  display: inline-block;
+.btn-icon {
+  height: 100%;
   margin-left: 10px;
-  width: 24px;
-  height: 24px;
-  background-image: url(../images/icon_send.svg);
+}
+
+.subscribe-btn:hover .btn-icon,
+.subscribe-btn:focus .btn-icon {
+  fill: var(--accent-color);
 }
 
 .form-input {
@@ -929,6 +934,10 @@ button {
   background-color: var(--primary-white-color);
 }
 
+.modal-button:hover > .close-icon {
+  fill: var(--accent-color);
+}
+
 .close-icon {
   position: absolute;
   left: 50%;
@@ -953,6 +962,15 @@ button {
   margin-bottom: 28px;
 }
 
+.label-field:focus-within > .label-form-input {
+  border-color: var(--accent-color);
+  outline: none;
+}
+
+.label-field:focus-within > .form-icon {
+  fill: var(--accent-color);
+}
+
 .label-form-input {
   display: block;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -970,6 +988,11 @@ button {
   position: relative;
   display: block;
   margin-bottom: 20px;
+}
+
+.text-label:focus-within > .text-input {
+  border-color: var(--accent-color);
+  outline: none;
 }
 
 .form-label {
@@ -1023,6 +1046,35 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.checkbox:checked + .checkbox-icon {
+  border-color: transparent;
+  background-color: var(--accent-color);
+  background-size: contain;
+  background-origin: border-box;
+  background-image: url(../images/check.svg);
+}
+
+.checkbox-icon {
+  display: block;
+  width: 16px;
+  height: 15px;
+  margin-right: 7px;
+
+  border: 2px solid var(--primary-text-color);
+  border-radius: 2px;
 }
 
 .label {
